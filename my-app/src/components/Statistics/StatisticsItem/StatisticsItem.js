@@ -2,16 +2,16 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styles from './StatisticsItem.module.css';
 
-const StatisticsItem = ({ key, value }) => (
+const StatisticsItem = ({ name, value }) => (
   <li className={styles.item}>
-    {key}
-    :
+    <span>{name}</span>
+    <span>:</span>
     <span>{value}</span>
   </li>
 );
 
 StatisticsItem.propTypes = {
-  key: propTypes.string.isRequired,
+  name: propTypes.string.isRequired,
   value: propTypes.number.isRequired,
 };
 

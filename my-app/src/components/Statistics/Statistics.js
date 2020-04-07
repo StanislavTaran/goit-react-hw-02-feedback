@@ -9,7 +9,7 @@ const Statistics = ({ stats }) => {
       <ul className={styles.list}>
         {stats.length > 0 &&
           stats.map(item => {
-            return <StatisticsItem key={item[0]} value={item[1]} />;
+            return <StatisticsItem name={item[0]} value={item[1]} />;
           })}
       </ul>
     </>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-// import propTypes from 'prop-types';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Section from './Section/Section';
+import Notification from './Notification/Notification';
 
 const INITIAL_STATE = {
   good: 0,
@@ -42,7 +42,7 @@ export default class App extends Component {
     const allOptions = {
       ...this.state,
       total: this.getTotalFeedback(),
-      positiveFeedback: this.getPositiveFeedbackPercentage(),
+      'Positive percentage': this.getPositiveFeedbackPercentage(),
     };
 
     return (
@@ -52,8 +52,12 @@ export default class App extends Component {
           options={this.options}
           onLeaveFeedback={this.handleClick}
         />
-        <Section>
-          <Statistics stats={Object.entries(allOptions)} />
+        <Section title="Statistics">
+          {allOptions.total > 0 ? (
+            <Statistics stats={Object.entries(allOptions)} />
+          ) : (
+            <Notification title="No feedback given" />
+          )}
         </Section>
       </>
     );

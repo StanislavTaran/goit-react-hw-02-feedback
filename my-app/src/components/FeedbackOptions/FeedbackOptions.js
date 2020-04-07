@@ -11,7 +11,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => (
             name={item}
             key={item}
             option={item}
-            onLeaveFeedback={() => onLeaveFeedback()}
+            onLeaveFeedback={onLeaveFeedback}
           />
         );
       })}
