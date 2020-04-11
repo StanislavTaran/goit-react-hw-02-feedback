@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import FeedbackButton from './FeedbackButon/FeedbackButton';
+import FeedbackButton from '../Button/Button';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
   <div>

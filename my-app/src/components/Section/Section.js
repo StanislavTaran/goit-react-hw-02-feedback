@@ -15,7 +15,7 @@ Section.propTypes = {
 };
 
 Section.defaultProps = {
-  children: '',
+  children: null,
 };
 
 export default Section;

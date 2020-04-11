@@ -25,9 +25,8 @@ export default class App extends Component {
   getPositiveFeedbackPercentage = () => {
     const { good } = this.state;
     const allFeedback = this.getTotalFeedback();
-    const positiveFeedback = good;
 
-    return `${Math.round((positiveFeedback * 100) / allFeedback)}%`;
+    return `${Math.round((good * 100) / allFeedback)}%`;
   };
 
   handleClick = e => {
